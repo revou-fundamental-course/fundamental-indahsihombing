@@ -3,9 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>English Learning Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="nav-container">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+            <p>English Learning Centre</p>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#portfolio">Our Courses</a>
+            <a href="#our-profile">Our Headquarter</a>
+            <a href="#order-form">Order Form</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <header>
+                <h1>Welcome to English Learning Center</h1>
+            </header>
+            <article>
+                <p>Your journey to mastering English starts here!</p>
+                <div class="banner-container">
+                    <div class="banner-slide fade">
+                        <img src="assets/Home_1.jpg" style="width:100%">
+                    </div>
+                    <div class="banner-slide fade">
+                        <img src="assets/Home_2.jpg" style="width:100%">
+                    </div>
+                    <div class="banner-slide fade">
+                        <img src="assets/Home_3.jpg" style="width:100%">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </article>
+        </section>
+        
+        <section id="portfolio">
+            <header>
+                <h1>Our Courses</h1>
+            </header>
+            <article class="portfolio-content">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/basic_english.jpeg');"></div>
+                    <h2>Basic English</h2>
+                    <p>An introductory course to the basics of English grammar and vocabulary.</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/conversational_english.png');"></div>
+                    <h2>Conversational English</h2>
+                    <p>Improve your speaking skills with practical conversation exercises.</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/business_english.jpg');"></div>
+                    <h2>Business English</h2>
+                    <p>Learn the vocabulary and communication skills needed for the business world.</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background-image: url('assets/toefl_test.png');"></div>
+                    <h2>Toefl Test</h2>
+                    <p>Take an exercise to test your knowledge.</p>
+                </div>
+            </article>
+        </section>
+        
+        <section id="our-profile">
+            <header>
+                <h1>Our Headquarter</h1>
+            </header>
+            <article class="profile-content">
+                <div class="profile-item">
+                    <div class="profile-icon profile-1"></div>
+                    <p>Jakarta</p>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon profile-2"></div>
+                    <p>Medan</p>
+                </div>
+                <div class="profile-item">
+                    <div class="profile-icon profile-3"></div>
+                    <p>Bandung</p>
+                </div>
+            </article>
+        </section>
+        
+        <section id="order-form">
+            <header>
+                <h1>Order Form</h1>
+            </header>
+            <div class="order-container">
+                <form class="order-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Select Course:</label>
+                        <select id="course" name="course">
+                            <option value="basic">Basic English</option>
+                            <option value="conversational">Conversational English</option>
+                            <option value="business">Business English</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="submitted-data">
+                    <p><strong>Current time:</strong> <span id="current-time"></span></p>
+                    <p><strong>Name:</strong> <span id="submitted-name"></span></p>
+                    <p><strong>Date of Birth:</strong> <span id="submitted-dob"></span></p>
+                    <p><strong>Gender:</strong> <span id="submitted-gender"></span></p>
+                    <p><strong>Course:</strong> <span id="submitted-course"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Created By Indah</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
